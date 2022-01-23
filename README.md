@@ -3,10 +3,10 @@ An Arduino library for controlling Train Simulator, based on RailDriver.dll and 
 This project is in development, and any contribution is appreciated.
 
 ## Usage
-Download the Windows application. Copy the entire content of the archive in the "Plugins" directory of Train Simulator.
+Download the Windows application (.zip file). Copy the entire content of the archive in the "Plugins" directory of Train Simulator. You can launch the app directly from this folder or as a shortcut from the Desktop.
 
 ## Compatible Hardware
-The library has been tested on Arduino Uno/Micro/Mega.
+The library has been tested on Arduino Uno/Micro/Mega. Other boards should be supported, as the Serial interface is user-configurable.
 
 ## Installation
 
