@@ -19,7 +19,7 @@ The library has been tested on Arduino Uno/Micro/Mega. Other boards should be su
 
 ```sh
 cd ~/Documents/Arduino/libraries/
-git clone https://github.com/VassilyDev/TSControl
+git clone https://github.com/VassilyDev/TSBridge
 ```
 
 ## Examples
