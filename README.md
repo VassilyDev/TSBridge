@@ -34,7 +34,7 @@ cd ~/Documents/Arduino/libraries/
 git clone https://github.com/VassilyDev/TSBridge
 ```
 
-## Examples
+### Examples
 
 See [examples](examples) folder.
 
