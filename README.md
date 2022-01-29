@@ -10,6 +10,10 @@ This project is in development, and any contribution is appreciated.
 ### How to install the application 
 A .zip file is located inside the library in the extras folder. Copy the entire content of the archive in the "Plugins" directory of Train Simulator. You can launch the app directly from this folder or as a shortcut from the Desktop.
 
+### Project info
+A list of currently supported loco and library keywords is available in the wiki.
+Please see [Compatible loco](./TSBridge/wiki/Compatible-loco-and-trains) for details.
+
 # Download and install Arduino library
 This library depends on Sharer (by Rufus31415) to communicate with the Arduino board. Please download it from the library Manager or
 https://github.com/Rufus31415/Sharer
