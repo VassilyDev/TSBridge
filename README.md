@@ -2,17 +2,18 @@
 ![.NET Framework 3.5](https://img.shields.io/badge/.NET_Framework-3.5-blueviolet)
 ![Arduino Uno](https://img.shields.io/badge/Arduino-any-blue)
 
-
-TSBridge is an Arduino library for controlling Train Simulator, based on RailDriver.dll and Sharer.dll. The project consists of a Windows application that must run when Train Simulator is running, communicating with the board with a referesh rate of about 10Hz.
+TSBridge is an Arduino library for controlling Train Simulator, based on RailDriver.dll and Sharer.dll. The project is completed by a Windows application that must run when Train Simulator is running, communicating with the board with a referesh rate of about 10Hz.
 This project is in development, and any contribution is appreciated.
 
-## Project structure
-Download the Windows application (.zip file). Copy the entire content of the archive in the "Plugins" directory of Train Simulator. You can launch the app directly from this folder or as a shortcut from the Desktop.
+# Overview
 
-## Compatible Hardware
+### How to install the application 
+A .zip file is located inside the library in the extras folder. Copy the entire content of the archive in the "Plugins" directory of Train Simulator. You can launch the app directly from this folder or as a shortcut from the Desktop.
+
+### Compatible Hardware
 The library has been tested on Arduino Uno/Micro/Mega. Other boards should be supported, as the Serial interface is user-configurable.
 
-## Installation
+# Installation
 
 ### Using the Arduino IDE Library Manager
 
