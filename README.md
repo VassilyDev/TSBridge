@@ -13,12 +13,19 @@ A .zip file is located inside the library in the extras folder. Copy the entire 
 ### Compatible Hardware
 The library has been tested on Arduino Uno/Micro/Mega. Other boards should be supported, as the Serial interface is user-configurable.
 
-# Installation
+# Download and install Arduino library
 
 ### Using the Arduino IDE Library Manager
 
 1. Choose `Sketch` -> `Include Library` -> `Add .ZIP Library...`
 2. Select the library downloaded from GitHub as ZIP.
+
+### Direct download
+
+Download the library archive:
+https://github.com/VassilyDev/TSBridge/archive/refs/heads/main.zip
+Extract so that you get a TSBridge directory in your Arduino "libraries" directory : ```C:\Program Files (x86)\Arduino\libraries\TSBridge```
+You can then enjoy the examples by restarting your Arduino IDE and go to menu ```File / examples / TSBridge```.
 
 ### Using Git
 
