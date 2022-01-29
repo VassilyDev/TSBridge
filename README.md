@@ -14,6 +14,8 @@ A .zip file is located inside the library in the extras folder. Copy the entire 
 The library has been tested on Arduino Uno/Micro/Mega. Other boards should be supported, as the Serial interface is user-configurable.
 
 # Download and install Arduino library
+This library depends on Sharer (by Rufus31415) to communicate with the Arduino board. Please download it from the library Manager or
+https://github.com/Rufus31415/Sharer
 
 ### Using the Arduino IDE Library Manager
 
