@@ -1,8 +1,9 @@
+![GitHub](https://img.shields.io/github/license/rufus31415/sharer)
 # Arduino TSBridge
 An Arduino library for controlling Train Simulator, based on RailDriver.dll and Sharer.dll. The project consists of a Windows application that must run when Train Simulator is running, and an Arduino library.
 This project is in development, and any contribution is appreciated.
 
-## Usage
+## Project structure
 Download the Windows application (.zip file). Copy the entire content of the archive in the "Plugins" directory of Train Simulator. You can launch the app directly from this folder or as a shortcut from the Desktop.
 
 ## Compatible Hardware
