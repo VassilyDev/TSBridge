@@ -1,4 +1,4 @@
-/*  TSController library by Alessandro Felicetti http://https://felicetti-a.eu/
+/*  TSBridge library by Alessandro Felicetti http://https://felicetti-a.eu/
    GitHub source code and documentation https://github.com/VassilyDev/TSBridge
 */
 
