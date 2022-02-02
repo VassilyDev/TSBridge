@@ -8,7 +8,7 @@ This project is in development, and any contribution is appreciated.
 # Overview
 
 ### How to install the application 
-Please download the windows application here [Releases](https://github.com/VassilyDev/TSBridge/releases/). Extract the entire content of the archive in the "Plugins" directory of Train Simulator. You can launch the app directly from this folder or as a shortcut from the Desktop.
+Please download the windows application [here](https://github.com/VassilyDev/TSBridge/releases/). Extract the entire content of the archive in the "Plugins" directory of Train Simulator. You can launch the app directly from this folder or as a shortcut from the Desktop.
 
 ### Project info
 A list of currently supported loco and library keywords is available in the wiki.
