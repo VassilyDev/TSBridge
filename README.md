@@ -12,7 +12,7 @@ A .zip file is located inside the library in the extras folder. Copy the entire 
 
 ### Project info
 A list of currently supported loco and library keywords is available in the wiki.
-Please see [Compatible loco](https://github.com/VassilyDev/TSBridge/wiki/Compatible-loco-and-trains) and [Method and functions](https://github.com/VassilyDev/TSBridge/wiki/Method-and-functions) for details.
+Please see [Compatible loco](https://github.com/VassilyDev/TSBridge/wiki/Compatible-loco-and-trains) and [Documentation](https://github.com/VassilyDev/TSBridge/wiki/Documentation) for details.
 
 # Download and install Arduino library
 This library depends on Sharer (by Rufus31415) to communicate with the Arduino board. Please download it from the library Manager or
