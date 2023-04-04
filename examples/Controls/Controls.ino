@@ -8,6 +8,7 @@
 unsigned long currentMillis = 0;
 unsigned long previousMillis = 0;
 int interval = 750;
+int lightStatus = 0;
 
 TSBridge bridge;
 
@@ -19,8 +20,6 @@ int io_lights = 6;
 int io_horn = 7;
 int io_emergency = 8;
 int io_sand = 9;
-int io_wipers = 10;
-int io_doors = 11;
 int io_vigi_aws = 12;
 int io_throttle = A0;
 int io_brake = A1;
@@ -36,9 +35,7 @@ void setup() {
   pinMode(io_horn, INPUT_PULLUP);
   pinMode(io_emergency, INPUT_PULLUP);
   pinMode(io_sand, INPUT_PULLUP);
-  pinMode(io_wipers, INPUT_PULLUP);
   pinMode(io_vigi_aws, INPUT_PULLUP);
-  pinMode(io_doors, INPUT_PULLUP);
 
   // Serial port configuration
   Serial.begin(115200);
@@ -49,54 +46,46 @@ void setup() {
 void loop() {
   bridge.run();
   // Various inputs
-  bridge.startup = (float)!digitalRead(io_startup);
-  bridge.pantograph = (float)!digitalRead(io_pantograph);
-  bridge.horn = (float)!digitalRead(io_horn);
-  bridge.emergency = (float)!digitalRead(io_emergency);
-  bridge.sander = (float)!digitalRead(io_sand);
-  bridge.wipers = (float)!digitalRead(io_wipers);
-  bridge.vigilReset = (float)!digitalRead(io_vigi_aws);
-  bridge.AWSReset = (float)!digitalRead(io_vigi_aws);
+  bridge.setStartup(!digitalRead(io_startup));
+  bridge.setPantograph(!digitalRead(io_pantograph));
+  bridge.setHorn(!digitalRead(io_horn));
+  bridge.setEmergency(!digitalRead(io_emergency));
+  bridge.setSander(!digitalRead(io_sand));
+  bridge.setVigilReset(!digitalRead(io_vigi_aws));
+  bridge.setAwsReset(!digitalRead(io_vigi_aws));
   // Reverser
-  if(digitalRead(reverserFW) == LOW){
-    bridge.reverser = 1.0;
+  if (digitalRead(reverserFW) == LOW) {
+    bridge.setReverser(1.0);
   }
-  if(digitalRead(reverserBW) == LOW){
-    bridge.reverser = -1.0;
+  if (digitalRead(reverserBW) == LOW) {
+    bridge.setReverser(-1.0);
   }
-  if((digitalRead(reverserFW) == HIGH)&&(digitalRead(reverserBW) == HIGH)){
-    bridge.reverser = 0.0;
-  }
-  // Doors
-  if (digitalRead(io_doors) == LOW) {
-    bridge.doorRight = 1.0;
-    bridge.doorLeft = 1.0;
-  }
-  if (digitalRead(io_doors) == HIGH) {
-    bridge.doorRight = 0.0;
-    bridge.doorLeft = 1.0;
+  if ((digitalRead(reverserFW) == HIGH) && (digitalRead(reverserBW) == HIGH)) {
+    bridge.setReverser(0.0);
   }
 
   // Throttle and brake
   int temp = analogRead(io_throttle);
-  bridge.throttle = (float)map(temp, 0, 1024, 0, 1000);
+  bridge.setThrottle((float)map(temp, 0, 1024, 0, 1000));
   temp = analogRead(io_brake);
-  bridge.brake = (float)map(temp, 0, 1024, 0, 1000);
+  bridge.setBrakes((float)map(temp, 0, 1024, 0, 1000));
 
   // Lights
   currentMillis = millis();
   if (currentMillis - previousMillis >= interval) {
     previousMillis = currentMillis;
-    if(!digitalRead(io_lights)){
-      if(bridge.lights == 0){
-        bridge.lights = 1;
-      }else if(bridge.lights == 1){
-        bridge.lights = 2;
-      }else if(bridge.lights == 2){
-        bridge.lights = 0;
+    if (!digitalRead(io_lights)) {
+      if (lightStatus == 0) {
+        bridge.setLights(1);
+        lightStatus = 1;
+      } else if (lightStatus == 1) {
+        bridge.setLights(2);
+        lightStatus = 20;
+      } else if (lightStatus == 2) {
+        bridge.setLights(0);
+        lightStatus = 0;
       }
     }
-
   }
   delay(10);
 }
